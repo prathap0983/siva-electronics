@@ -27,11 +27,24 @@ const PORT = process.env.PORT || 5000;
 // Security Middlewares
 app.use(helmet());
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://sivaelectronics-store.vercel.app"
+];
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://sivaelectronics-store.vercel.app"
-  ],
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    const isAllowed = allowedOrigins.includes(origin) || 
+                      /^http:\/\/localhost:\d+$/.test(origin) ||
+                      /^http:\/\/192\.168\.\d+\.\d+:\d+$/.test(origin) ||
+                      /^http:\/\/127\.0\.0\.1:\d+$/.test(origin);
+    if (isAllowed) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
