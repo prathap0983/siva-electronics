@@ -66,29 +66,53 @@ export const Home = () => {
       
       {/* Background Circuit Decals */}
       <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
-        {/* Top Left Decal */}
+        {/* 1. Top Left - Big */}
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute -top-12 -left-20 w-80 md:w-96 opacity-[0.18] dark:opacity-[0.22] rotate-12 filter dark:invert" 
+          className="absolute -top-16 -left-28 w-[450px] md:w-[600px] opacity-70 filter dark:invert" 
         />
-        {/* Top Right Decal */}
+        {/* 2. Top Right - Small */}
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute top-[20%] -right-16 w-72 md:w-80 opacity-[0.15] dark:opacity-[0.20] -rotate-45 filter dark:invert" 
+          className="absolute top-[8%] right-[5%] w-[180px] md:w-[240px] opacity-70 -rotate-45 filter dark:invert" 
         />
-        {/* Middle Left Decal */}
+        {/* 3. Mid-Top Left - Medium */}
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute top-[45%] -left-24 w-80 md:w-96 opacity-[0.18] dark:opacity-[0.22] rotate-[80deg] filter dark:invert" 
+          className="absolute top-[24%] -left-16 w-[280px] md:w-[360px] opacity-70 rotate-[90deg] filter dark:invert" 
         />
-        {/* Bottom Right Decal */}
+        {/* 4. Mid Right - Big */}
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute bottom-20 -right-20 w-96 opacity-[0.18] dark:opacity-[0.22] rotate-[15deg] filter dark:invert" 
+          className="absolute top-[38%] -right-24 w-[400px] md:w-[550px] opacity-70 rotate-[195deg] filter dark:invert" 
+        />
+        {/* 5. Mid-Bottom Left - Small */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute top-[55%] left-[8%] w-[150px] md:w-[200px] opacity-70 rotate-[35deg] filter dark:invert" 
+        />
+        {/* 6. Mid-Bottom Right - Medium */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute top-[68%] right-[10%] w-[250px] md:w-[320px] opacity-70 -rotate-[80deg] filter dark:invert" 
+        />
+        {/* 7. Bottom Left - Big */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute -bottom-24 -left-32 w-[400px] md:w-[500px] opacity-70 rotate-[145deg] filter dark:invert" 
+        />
+        {/* 8. Bottom Center-Right - Small */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute bottom-[8%] right-[25%] w-[120px] md:w-[160px] opacity-70 rotate-[15deg] filter dark:invert" 
         />
       </div>
       
