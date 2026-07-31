@@ -58,16 +58,7 @@ export const Home = () => {
       {/* 1. Large Hero Section */}
       <section className="relative overflow-hidden py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-12">
         <div className="flex-1 space-y-6 text-left max-w-2xl">
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light rounded-full text-xs font-semibold uppercase tracking-wider"
-          >
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Authorized Service Partner</span>
-          </motion.div>
-          
+
           <motion.h1 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}

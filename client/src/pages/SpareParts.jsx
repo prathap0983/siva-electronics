@@ -195,7 +195,7 @@ export const SpareParts = () => {
                               }
                               return number;
                             };
-                            const whatsappNum = formatWhatsAppNumber(import.meta.env.VITE_WHATSAPP || '8072300191');
+                            const whatsappNum = formatWhatsAppNumber(import.meta.env.VITE_WHATSAPP || '+918072300191');
                             const message = `Hi Siva Electronics,\n\nI am inquiring about the spare part: *${part.name}* priced at ₹${part.price}. Is it compatible with my TV model details?`;
                             window.location.href = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(message)}`;
                           }}

@@ -7,7 +7,7 @@ export const Contact = () => {
 
   const businessName = settings?.business_name || 'Siva Electronics';
   const phone = settings?.phone || '+91 8072300191';
-  const whatsapp = settings?.whatsapp || '8072300191';
+  const whatsapp = settings?.whatsapp || '+918072300191';
   const address = settings?.address || 'Siva electronics,north car street,vava complex,tiruchendur 628205';
   const hours = settings?.business_hours || {};
 
