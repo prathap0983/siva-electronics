@@ -81,7 +81,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1] text-shadow-hero"
           >
             Siva Electronics
           </motion.h1>
@@ -89,7 +89,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-medium italic"
+            className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 font-medium italic text-shadow-hero"
           >
             "Your Trusted Sales & Service Center"
           </motion.p>
@@ -98,7 +98,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-base sm:text-lg text-slate-650 dark:text-slate-350 leading-relaxed"
+            className="text-base sm:text-lg text-slate-650 dark:text-slate-350 leading-relaxed text-shadow-body"
           >
             Expert Smart TV sales, professional diagnostic repairs, home services, and original spare parts. Specializing in custom-assembled high-end LED TVs tailored for your budget.
           </motion.p>
