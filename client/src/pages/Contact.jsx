@@ -66,7 +66,7 @@ export const Contact = () => {
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block">WhatsApp Chat</span>
                 <button
                   type="button"
-                  onClick={() => window.open(`https://wa.me/${cleanWhatsapp}`, '_blank', 'noopener,noreferrer')}
+                  onClick={() => window.location.href = `https://wa.me/${cleanWhatsapp}`}
                   className="text-lg font-bold text-slate-900 dark:text-white hover:text-green-500 transition-colors hover:underline text-left"
                 >
                   Send a Message

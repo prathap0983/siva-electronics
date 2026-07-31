@@ -107,7 +107,7 @@ function ProductDetails() {
               <span>Add to Cart</span>
             </button>
             <button
-              onClick={() => window.open("https://wa.me/918072300191", "_blank", "noopener,noreferrer")}
+              onClick={() => window.location.href = "https://wa.me/918072300191"}
               className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold shadow-md active:scale-95 transition-all"
             >
               <MessageSquare className="w-4 h-4" />

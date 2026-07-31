@@ -221,7 +221,7 @@ const PublicLayout = () => {
                     onClick={() => {
                       const clean = whatsapp.replace(/[^0-9]/g, '');
                       const formatted = clean.length === 10 ? `91${clean}` : clean;
-                      window.open(`https://wa.me/${formatted}`, '_blank', 'noopener,noreferrer');
+                      window.location.href = `https://wa.me/${formatted}`;
                     }}
                     className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl text-sm font-semibold shadow-md w-full"
                   >
@@ -293,7 +293,7 @@ const PublicLayout = () => {
                   onClick={() => {
                     const clean = whatsapp.replace(/[^0-9]/g, '');
                     const formatted = clean.length === 10 ? `91${clean}` : clean;
-                    window.open(`https://wa.me/${formatted}`, '_blank', 'noopener,noreferrer');
+                    window.location.href = `https://wa.me/${formatted}`;
                   }}
                   className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-green-500 transition-colors text-sm text-left w-full"
                 >

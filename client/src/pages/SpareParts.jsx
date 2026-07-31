@@ -192,7 +192,7 @@ export const SpareParts = () => {
                             const clean = rawWhatsapp.replace(/[^0-9]/g, '');
                             const whatsappNum = clean.length === 10 ? `91${clean}` : clean;
                             const message = `Hi Siva Electronics,\n\nI am inquiring about the spare part: *${part.name}* priced at ₹${part.price}. Is it compatible with my TV model details?`;
-                            window.open(`https://wa.me/${whatsappNum}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+                            window.location.href = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(message)}`;
                           }}
                           className="p-2.5 bg-green-600 hover:bg-green-700 text-white rounded-xl shadow-sm transition-colors flex items-center justify-center flex-shrink-0"
                           title="Inquire WhatsApp"

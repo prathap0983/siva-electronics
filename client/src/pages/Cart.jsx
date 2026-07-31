@@ -16,7 +16,7 @@ function Cart() {
     text += "Please verify availability and confirm my order. Thanks!";
 
     const encoded = encodeURIComponent(text);
-    window.open(`https://wa.me/918072300191?text=${encoded}`, "_blank");
+    window.location.href = `https://wa.me/918072300191?text=${encoded}`;
   };
 
   if (cart.length === 0) {
