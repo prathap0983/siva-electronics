@@ -354,29 +354,66 @@ export const Home = () => {
           <p className="text-sm text-slate-500 dark:text-slate-450">Real reviews from our retail shop and repair service visits.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-          {reviews.map((rev, index) => (
-            <div key={index} className="bg-white dark:bg-card-dark p-6 rounded-2xl border border-slate-250/40 dark:border-slate-800 shadow-sm text-left flex flex-col justify-between space-y-4">
-              <div className="space-y-2">
-                {/* Rating stars */}
-                <div className="flex gap-0.5 text-amber-500">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+        <div className="space-y-6 overflow-hidden w-full relative py-4">
+          {/* Gradient Overlays for a premium fading effect on the edges */}
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-bg-light dark:from-bg-dark to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-bg-light dark:from-bg-dark to-transparent z-10 pointer-events-none" />
+
+          {/* Row 1: Right to Left */}
+          <div className="flex w-full overflow-hidden">
+            <div className="animate-marquee flex gap-6 pr-6">
+              {[...reviews.slice(0, 5), ...reviews.slice(0, 5)].map((rev, index) => (
+                <div key={index} className="w-[280px] sm:w-[340px] flex-shrink-0 bg-white dark:bg-card-dark p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm text-left flex flex-col justify-between space-y-4 whitespace-normal">
+                  <div className="space-y-2">
+                    {/* Rating stars */}
+                    <div className="flex gap-0.5 text-amber-500">
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+                    </div>
+                    <p className="text-xs italic text-slate-600 dark:text-slate-350 leading-relaxed font-medium">
+                      "{rev.comment}"
+                    </p>
+                  </div>
+                  <div className="border-t border-slate-100 dark:border-slate-850 pt-4 flex items-center gap-3">
+                    <div className="h-8 w-8 rounded-full bg-primary/20 text-primary dark:text-primary-light flex items-center justify-center font-bold text-xs">
+                      {rev.name[0]}
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="font-bold text-xs text-slate-800 dark:text-slate-200">{rev.name}</span>
+                      <span className="text-[10px] text-slate-400">{rev.role}</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs italic text-slate-600 dark:text-slate-350 leading-relaxed font-medium">
-                  "{rev.comment}"
-                </p>
-              </div>
-              <div className="border-t border-slate-100 dark:border-slate-850 pt-4 flex items-center gap-3">
-                <div className="h-8 w-8 rounded-full bg-primary/20 text-primary dark:text-primary-light flex items-center justify-center font-bold text-xs">
-                  {rev.name[0]}
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold text-xs text-slate-800 dark:text-slate-255">{rev.name}</span>
-                  <span className="text-[10px] text-slate-400">{rev.role}</span>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Row 2: Left to Right */}
+          <div className="flex w-full overflow-hidden">
+            <div className="animate-marquee-reverse flex gap-6 pr-6">
+              {[...reviews.slice(5, 10), ...reviews.slice(5, 10)].map((rev, index) => (
+                <div key={index} className="w-[280px] sm:w-[340px] flex-shrink-0 bg-white dark:bg-card-dark p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm text-left flex flex-col justify-between space-y-4 whitespace-normal">
+                  <div className="space-y-2">
+                    {/* Rating stars */}
+                    <div className="flex gap-0.5 text-amber-500">
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+                    </div>
+                    <p className="text-xs italic text-slate-600 dark:text-slate-350 leading-relaxed font-medium">
+                      "{rev.comment}"
+                    </p>
+                  </div>
+                  <div className="border-t border-slate-100 dark:border-slate-850 pt-4 flex items-center gap-3">
+                    <div className="h-8 w-8 rounded-full bg-primary/20 text-primary dark:text-primary-light flex items-center justify-center font-bold text-xs">
+                      {rev.name[0]}
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="font-bold text-xs text-slate-800 dark:text-slate-200">{rev.name}</span>
+                      <span className="text-[10px] text-slate-400">{rev.role}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
