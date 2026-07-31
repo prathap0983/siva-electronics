@@ -45,8 +45,8 @@ export const ConfirmDialog = ({
           <div className="flex gap-4">
             <div className={`h-11 w-11 rounded-full flex-shrink-0 flex items-center justify-center ${
               isDangerous 
-                ? 'bg-red-550/10 text-red-500' 
-                : 'bg-orange-550/10 text-orange-550'
+                ? 'bg-red-500/10 text-red-500' 
+                : 'bg-orange-500/10 text-orange-500'
             }`}>
               <AlertTriangle className="w-5 h-5" />
             </div>
@@ -57,7 +57,7 @@ export const ConfirmDialog = ({
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
                 {message}
               </p>
-
+ 
               {/* Action Buttons */}
               <div className="flex items-center justify-end gap-3">
                 <button
@@ -72,7 +72,7 @@ export const ConfirmDialog = ({
                   onClick={onConfirm}
                   className={`px-4 py-2 text-white font-semibold rounded-xl text-sm transition-colors ${
                     isDangerous 
-                      ? 'bg-red-650 hover:bg-red-700' 
+                      ? 'bg-red-600 hover:bg-red-700' 
                       : 'bg-primary hover:bg-primary-hover'
                   }`}
                 >
