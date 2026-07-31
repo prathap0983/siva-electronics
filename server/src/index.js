@@ -30,7 +30,7 @@ app.use(helmet());
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://sivaelectronics-liart.vercel.app"
+    "https://sivaelectronics-store.vercel.app"
   ],
   credentials: true
 }));
