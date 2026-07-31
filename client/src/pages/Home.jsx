@@ -10,9 +10,6 @@ import api from '../api/api.js';
 import Skeleton from '../components/Skeleton.jsx';
 import bondingService from '../assets/bonding_service.jpg';
 import circuitBg from '../assets/circuit_bg.png';
-import chipGrey from '../assets/chip_grey.png';
-import chipBlue from '../assets/chip_blue.jpg';
-
 export const Home = () => {
   const { settings } = useSettings();
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -218,22 +215,8 @@ export const Home = () => {
       </section>
 
       {/* 4. Featured Products (TVs) */}
-      <section className="space-y-8 relative overflow-hidden py-4">
-        {/* Background Chips */}
-        <div className="absolute inset-0 pointer-events-none select-none z-0">
-          <img 
-            src={chipGrey} 
-            alt="" 
-            className="absolute top-[8%] -left-12 w-32 md:w-44 opacity-70 rotate-45" 
-          />
-          <img 
-            src={chipBlue} 
-            alt="" 
-            className="absolute bottom-[10%] -right-16 w-36 md:w-48 opacity-70 -rotate-12 rounded-full" 
-          />
-        </div>
-
-        <div className="relative z-10 flex items-end justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+      <section className="space-y-8">
+        <div className="flex items-end justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
           <div className="text-left space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Featured Smart & LED TVs</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">Discover our best-selling smart TVs and custom assemblies.</p>
@@ -245,11 +228,11 @@ export const Home = () => {
         </div>
 
         {loading ? (
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Skeleton /><Skeleton /><Skeleton /><Skeleton />
           </div>
         ) : featuredProducts.length > 0 ? (
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProducts.map((prod) => (
               <div key={prod.id} className="premium-card flex flex-col overflow-hidden text-left bg-white dark:bg-card-dark">
                 {/* Image */}
@@ -312,22 +295,8 @@ export const Home = () => {
       </section>
 
       {/* 5. Featured Spare Parts */}
-      <section className="space-y-8 relative overflow-hidden py-4">
-        {/* Background Chips */}
-        <div className="absolute inset-0 pointer-events-none select-none z-0">
-          <img 
-            src={chipBlue} 
-            alt="" 
-            className="absolute top-[12%] -left-16 w-36 md:w-48 opacity-70 -rotate-90 rounded-full" 
-          />
-          <img 
-            src={chipGrey} 
-            alt="" 
-            className="absolute bottom-[12%] -right-12 w-28 md:w-40 opacity-70 rotate-12" 
-          />
-        </div>
-
-        <div className="relative z-10 flex items-end justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+      <section className="space-y-8">
+        <div className="flex items-end justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
           <div className="text-left space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Original Spare Parts</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">Genuine components for repair shops and DIY diagnostics.</p>
@@ -339,11 +308,11 @@ export const Home = () => {
         </div>
 
         {loading ? (
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <Skeleton /><Skeleton /><Skeleton />
           </div>
         ) : featuredParts.length > 0 ? (
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {featuredParts.map((part) => (
               <div key={part.id} className="premium-card p-5 bg-white dark:bg-card-dark text-left flex gap-4 items-center">
                 <div className="h-16 w-16 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-850 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center text-slate-450 dark:text-slate-600">
