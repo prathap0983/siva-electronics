@@ -166,19 +166,39 @@
   animation-play-state: paused;
 }
 
-/* Custom Text Shadows for high-readability on circuit backgrounds */
+/* High-contrast Text Shadow borders for 100% legibility on busy backgrounds */
 .text-shadow-hero {
-  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.95), 0 1px 2px rgba(255, 255, 255, 0.9);
+  text-shadow: 
+    -2px -2px 0 #F8FAFC,  
+     2px -2px 0 #F8FAFC,
+    -2px  2px 0 #F8FAFC,
+     2px  2px 0 #F8FAFC,
+     0px 4px 6px rgba(0,0,0,0.06);
 }
 
 .dark .text-shadow-hero {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 1px 2px rgba(0, 0, 0, 0.9);
+  text-shadow: 
+    -2px -2px 0 #000000,  
+     2px -2px 0 #000000,
+    -2px  2px 0 #000000,
+     2px  2px 0 #000000,
+     0px 4px 6px rgba(255,255,255,0.04);
 }
 
 .text-shadow-body {
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 1px 1px rgba(255, 255, 255, 0.9);
+  text-shadow: 
+    -1.5px -1.5px 0 #F8FAFC,  
+     1.5px -1.5px 0 #F8FAFC,
+    -1.5px  1.5px 0 #F8FAFC,
+     1.5px  1.5px 0 #F8FAFC,
+     0px 2px 4px rgba(0,0,0,0.05);
 }
 
 .dark .text-shadow-body {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 1px 1px rgba(0, 0, 0, 0.9);
+  text-shadow: 
+    -1.5px -1.5px 0 #000000,  
+     1.5px -1.5px 0 #000000,
+    -1.5px  1.5px 0 #000000,
+     1.5px  1.5px 0 #000000,
+     0px 2px 4px rgba(255,255,255,0.03);
 }
