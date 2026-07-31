@@ -188,9 +188,14 @@ export const SpareParts = () => {
                         <button
                           type="button"
                           onClick={() => {
-                            const rawWhatsapp = import.meta.env.VITE_WHATSAPP || '8072300191';
-                            const clean = rawWhatsapp.replace(/[^0-9]/g, '');
-                            const whatsappNum = clean.length === 10 ? `91${clean}` : clean;
+                            const formatWhatsAppNumber = (phone) => {
+                              let number = phone.replace(/\D/g, "");
+                              if (number.length === 10) {
+                                number = "91" + number;
+                              }
+                              return number;
+                            };
+                            const whatsappNum = formatWhatsAppNumber(import.meta.env.VITE_WHATSAPP || '8072300191');
                             const message = `Hi Siva Electronics,\n\nI am inquiring about the spare part: *${part.name}* priced at ₹${part.price}. Is it compatible with my TV model details?`;
                             window.location.href = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(message)}`;
                           }}

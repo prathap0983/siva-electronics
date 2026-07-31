@@ -11,9 +11,15 @@ export const Contact = () => {
   const address = settings?.address || 'Siva electronics,north car street,vava complex,tiruchendur 628205';
   const hours = settings?.business_hours || {};
 
-  // Clean WhatsApp number and format country code
-  const rawClean = whatsapp.replace(/[^0-9]/g, '');
-  const cleanWhatsapp = rawClean.length === 10 ? `91${rawClean}` : rawClean;
+  const formatWhatsAppNumber = (phone) => {
+    let number = phone.replace(/\D/g, "");
+    if (number.length === 10) {
+      number = "91" + number;
+    }
+    return number;
+  };
+
+  const cleanWhatsapp = formatWhatsAppNumber(whatsapp);
 
   return (
     <div className="space-y-16 py-6 text-left max-w-5xl mx-auto animate-enter">

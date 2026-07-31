@@ -34,6 +34,14 @@ const PublicLayout = () => {
   const hours = settings?.business_hours || {};
   const socials = settings?.social_links || {};
 
+  const formatWhatsAppNumber = (phone) => {
+    let number = phone.replace(/\D/g, "");
+    if (number.length === 10) {
+      number = "91" + number;
+    }
+    return number;
+  };
+
   return (
     <div className="min-h-screen flex flex-col transition-colors duration-300">
       {/* Sticky Header */}
@@ -219,9 +227,8 @@ const PublicLayout = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      const clean = whatsapp.replace(/[^0-9]/g, '');
-                      const formatted = clean.length === 10 ? `91${clean}` : clean;
-                      window.location.href = `https://wa.me/${formatted}`;
+                      const whatsappNumber = formatWhatsAppNumber(whatsapp);
+                      window.location.href = `https://wa.me/${whatsappNumber}`;
                     }}
                     className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl text-sm font-semibold shadow-md w-full"
                   >
@@ -291,9 +298,8 @@ const PublicLayout = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    const clean = whatsapp.replace(/[^0-9]/g, '');
-                    const formatted = clean.length === 10 ? `91${clean}` : clean;
-                    window.location.href = `https://wa.me/${formatted}`;
+                    const whatsappNumber = formatWhatsAppNumber(whatsapp);
+                    window.location.href = `https://wa.me/${whatsappNumber}`;
                   }}
                   className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-green-500 transition-colors text-sm text-left w-full"
                 >
