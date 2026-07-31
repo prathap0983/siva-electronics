@@ -27,16 +27,13 @@ const PORT = process.env.PORT || 5000;
 // Security Middlewares
 app.use(helmet());
 
-// CORS configuration - Allow all origins in development, restrict in production
-const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? [process.env.CLIENT_URL, 'https://siva-electronics.vercel.app'] 
-    : '*',
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-};
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://sivaelectronics-liart.vercel.app"
+  ],
+  credentials: true
+}));
 
 // HTTP Request Logger
 app.use(morgan('dev'));
@@ -93,10 +90,6 @@ app.use((req, res, next) => {
 // Global Error Handler
 app.use(errorHandler);
 
-// Start server
 app.listen(PORT, () => {
-  console.log(`================================================`);
-  console.log(` Siva Electronics Server is running on port ${PORT} `);
-  console.log(` Environment: ${process.env.NODE_ENV || 'development'} `);
-  console.log(`================================================`);
+  console.log(`Server running on port ${PORT}`);
 });
