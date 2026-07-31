@@ -72,48 +72,6 @@ export const Home = () => {
           alt="" 
           className="absolute -top-16 -left-28 w-[450px] md:w-[600px] opacity-70 filter dark:invert" 
         />
-        {/* 2. Top Right - Small */}
-        <img 
-          src={circuitBg} 
-          alt="" 
-          className="absolute top-[8%] right-[5%] w-[180px] md:w-[240px] opacity-70 -rotate-45 filter dark:invert" 
-        />
-        {/* 3. Mid-Top Left - Medium */}
-        <img 
-          src={circuitBg} 
-          alt="" 
-          className="absolute top-[24%] -left-16 w-[280px] md:w-[360px] opacity-70 rotate-[90deg] filter dark:invert" 
-        />
-        {/* 4. Mid Right - Big */}
-        <img 
-          src={circuitBg} 
-          alt="" 
-          className="absolute top-[38%] -right-24 w-[400px] md:w-[550px] opacity-70 rotate-[195deg] filter dark:invert" 
-        />
-        {/* 5. Mid-Bottom Left - Small */}
-        <img 
-          src={circuitBg} 
-          alt="" 
-          className="absolute top-[55%] left-[8%] w-[150px] md:w-[200px] opacity-70 rotate-[35deg] filter dark:invert" 
-        />
-        {/* 6. Mid-Bottom Right - Medium */}
-        <img 
-          src={circuitBg} 
-          alt="" 
-          className="absolute top-[68%] right-[10%] w-[250px] md:w-[320px] opacity-70 -rotate-[80deg] filter dark:invert" 
-        />
-        {/* 7. Bottom Left - Big */}
-        <img 
-          src={circuitBg} 
-          alt="" 
-          className="absolute -bottom-24 -left-32 w-[400px] md:w-[500px] opacity-70 rotate-[145deg] filter dark:invert" 
-        />
-        {/* 8. Bottom Center-Right - Small */}
-        <img 
-          src={circuitBg} 
-          alt="" 
-          className="absolute bottom-[8%] right-[25%] w-[120px] md:w-[160px] opacity-70 rotate-[15deg] filter dark:invert" 
-        />
       </div>
       
       {/* 1. Large Hero Section */}
