@@ -147,7 +147,7 @@ export const GalleryManagement = () => {
                   
                   <button
                     onClick={() => handleOpenDelete(item)}
-                    className="p-1.5 bg-red-650 hover:bg-red-750 rounded-lg text-white transition-colors flex-shrink-0"
+                    className="p-1.5 bg-red-600 hover:bg-red-700 rounded-lg text-white transition-colors flex-shrink-0"
                     title="Delete Photo"
                   >
                     <Trash2 className="w-4 h-4" />

@@ -142,7 +142,7 @@ export const DragDropUpload = ({
                   <button
                     type="button"
                     onClick={() => onRemoveImage(url)}
-                    className="p-1.5 bg-red-650 text-white rounded-full hover:bg-red-750 transition-colors shadow"
+                    className="p-1.5 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors shadow"
                     title="Delete Image"
                   >
                     <X className="w-4 h-4" />

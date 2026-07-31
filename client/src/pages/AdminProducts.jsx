@@ -188,7 +188,7 @@ function AdminProducts() {
                         </button>
                         <button
                           onClick={() => openDeleteModal(product)}
-                          className="p-2 hover:bg-red-50 dark:hover:bg-red-950/20 text-slate-500 hover:text-red-650 rounded-xl transition-colors"
+                          className="p-2 hover:bg-red-50 dark:hover:bg-red-950/20 text-slate-500 hover:text-red-600 rounded-xl transition-colors"
                           title="Delete Product"
                         >
                           <Trash2 className="w-4.5 h-4.5" />
@@ -231,7 +231,7 @@ function AdminProducts() {
                   </button>
                   <button
                     onClick={() => openDeleteModal(product)}
-                    className="p-2 bg-red-50 dark:bg-red-950/20 text-red-650 rounded-xl transition-colors"
+                    className="p-2 bg-red-50 dark:bg-red-950/20 text-red-600 rounded-xl transition-colors"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
@@ -291,7 +291,7 @@ function AdminProducts() {
               <button
                 onClick={handleDeleteConfirm}
                 disabled={deleting}
-                className="px-5 py-2 bg-red-650 hover:bg-red-750 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 disabled:opacity-50"
+                className="px-5 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 disabled:opacity-50"
               >
                 {deleting && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
                 <span>Delete</span>

@@ -114,7 +114,7 @@ function Cart() {
                 {/* Delete */}
                 <button
                   onClick={() => removeFromCart(item.id, item.type)}
-                  className="p-2 hover:bg-red-50 dark:hover:bg-red-950/20 text-slate-450 hover:text-red-655 rounded-xl transition-colors"
+                  className="p-2 hover:bg-red-50 dark:hover:bg-red-950/20 text-slate-450 hover:text-red-600 rounded-xl transition-colors"
                   title="Remove Item"
                 >
                   <Trash2 className="w-4 h-4" />

@@ -162,30 +162,30 @@ export const Dashboard = () => {
                 {stats?.outOfStock > 0 && (
                   <div className="p-4 bg-red-500/5 dark:bg-red-950/10 border border-red-500/10 rounded-xl flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-red-100 dark:bg-red-900/30 text-red-650 dark:text-red-400 rounded-lg">
+                      <div className="p-2 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-lg">
                         <AlertOctagon className="w-4.5 h-4.5" />
                       </div>
                       <div className="text-left">
-                        <h4 className="text-sm font-bold text-red-650 dark:text-red-400">Out of Stock</h4>
+                        <h4 className="text-sm font-bold text-red-600 dark:text-red-400">Out of Stock</h4>
                         <p className="text-xs text-slate-400">Items have reached zero quantity</p>
                       </div>
                     </div>
-                    <span className="font-bold text-sm text-red-650 dark:text-red-400">{stats.outOfStock} items</span>
+                    <span className="font-bold text-sm text-red-600 dark:text-red-400">{stats.outOfStock} items</span>
                   </div>
                 )}
 
                 {stats?.lowStock > 0 && (
-                  <div className="p-4 bg-orange-550/5 dark:bg-orange-950/10 border border-orange-550/10 rounded-xl flex items-center justify-between">
+                  <div className="p-4 bg-orange-500/5 dark:bg-orange-950/10 border border-orange-500/10 rounded-xl flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-orange-100 dark:bg-orange-900/30 text-orange-655 dark:text-orange-400 rounded-lg">
+                      <div className="p-2 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-lg">
                         <AlertTriangle className="w-4.5 h-4.5" />
                       </div>
                       <div className="text-left">
-                        <h4 className="text-sm font-bold text-orange-655 dark:text-orange-400">Low Stock Warning</h4>
+                        <h4 className="text-sm font-bold text-orange-600 dark:text-orange-400">Low Stock Warning</h4>
                         <p className="text-xs text-slate-400">Items nearing custom thresholds</p>
                       </div>
                     </div>
-                    <span className="font-bold text-sm text-orange-655 dark:text-orange-400">{stats.lowStock} items</span>
+                    <span className="font-bold text-sm text-orange-600 dark:text-orange-400">{stats.lowStock} items</span>
                   </div>
                 )}
               </div>

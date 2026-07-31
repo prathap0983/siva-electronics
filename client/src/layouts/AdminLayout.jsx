@@ -115,7 +115,7 @@ const AdminLayout = () => {
           {/* Logout */}
           <button
             onClick={handleLogout}
-            className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-650 dark:hover:text-red-400 transition-colors text-left"
+            className="flex items-center gap-3 w-full px-4 py-2.5 rounded-xl text-sm font-semibold text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-600 dark:hover:text-red-400 transition-colors text-left"
           >
             <LogOut className="w-5 h-5 flex-shrink-0" />
             <span>Sign Out</span>

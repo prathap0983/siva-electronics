@@ -329,8 +329,8 @@ export const ProductManagement = () => {
                     <td className="px-6 py-4 text-center">
                       <span className={`font-bold px-2 py-0.5 rounded text-xs ${
                         prod.stock_qty === 0 
-                          ? 'bg-red-50 text-red-650 dark:bg-red-950/20' 
-                          : (prod.stock_qty <= prod.low_stock_threshold ? 'bg-orange-50 text-orange-655 dark:bg-orange-950/20' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-350')
+                          ? 'bg-red-50 text-red-600 dark:bg-red-950/20' 
+                          : (prod.stock_qty <= prod.low_stock_threshold ? 'bg-orange-50 text-orange-600 dark:bg-orange-950/20' : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-350')
                       }`}>
                         {prod.stock_qty} qty
                       </span>

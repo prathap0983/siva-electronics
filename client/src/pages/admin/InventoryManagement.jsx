@@ -124,22 +124,22 @@ export const InventoryManagement = () => {
             </div>
           </div>
 
-          <div className="premium-card p-5 bg-white dark:bg-card-dark flex items-center justify-between border-l-4 border-l-orange-555">
+          <div className="premium-card p-5 bg-white dark:bg-card-dark flex items-center justify-between border-l-4 border-l-orange-500">
             <div className="space-y-1">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Low Stock Warnings</span>
-              <p className="text-2xl font-extrabold text-orange-655 dark:text-orange-400">{summary.lowStockCount}</p>
+              <p className="text-2xl font-extrabold text-orange-600 dark:text-orange-400">{summary.lowStockCount}</p>
             </div>
-            <div className="p-3.5 bg-orange-100 dark:bg-orange-950/20 rounded-2xl text-orange-655 dark:text-orange-400">
+            <div className="p-3.5 bg-orange-100 dark:bg-orange-950/20 rounded-2xl text-orange-600 dark:text-orange-400">
               <AlertTriangle className="w-5 h-5" />
             </div>
           </div>
 
-          <div className="premium-card p-5 bg-white dark:bg-card-dark flex items-center justify-between border-l-4 border-l-red-550">
+          <div className="premium-card p-5 bg-white dark:bg-card-dark flex items-center justify-between border-l-4 border-l-red-500">
             <div className="space-y-1">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Out of Stock Alarms</span>
-              <p className="text-2xl font-extrabold text-red-650 dark:text-red-400">{summary.outOfStockCount}</p>
+              <p className="text-2xl font-extrabold text-red-600 dark:text-red-400">{summary.outOfStockCount}</p>
             </div>
-            <div className="p-3.5 bg-red-100 dark:bg-red-950/20 rounded-2xl text-red-650 dark:text-red-400">
+            <div className="p-3.5 bg-red-100 dark:bg-red-950/20 rounded-2xl text-red-600 dark:text-red-400">
               <AlertOctagon className="w-5 h-5 animate-pulse" />
             </div>
           </div>
@@ -199,8 +199,8 @@ export const InventoryManagement = () => {
                     <td className="px-6 py-4 text-center">
                       <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full ${
                         item.status === 'Out of Stock' 
-                          ? 'bg-red-50 text-red-650 dark:bg-red-950/25' 
-                          : (item.status === 'Low Stock' ? 'bg-orange-50 text-orange-655 dark:bg-orange-950/25' : 'bg-green-50 text-green-700 dark:bg-green-950/20 dark:text-green-300')
+                          ? 'bg-red-55/10 text-red-600 dark:bg-red-950/25' 
+                          : (item.status === 'Low Stock' ? 'bg-orange-50 text-orange-600 dark:bg-orange-950/25' : 'bg-green-50 text-green-700 dark:bg-green-950/20 dark:text-green-300')
                       }`}>
                         {item.status}
                       </span>
@@ -317,7 +317,7 @@ export const InventoryManagement = () => {
                     type="submit"
                     disabled={submitting}
                     className={`px-5 py-2 text-white text-sm font-semibold rounded-xl flex items-center gap-1.5 ${
-                      adjustType === 'increase' ? 'bg-green-600 hover:bg-green-700' : 'bg-red-650 hover:bg-red-750'
+                      adjustType === 'increase' ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700'
                     }`}
                   >
                     {submitting ? (
