@@ -8,7 +8,7 @@ import {
 import { useSettings } from '../context/SettingsContext.jsx';
 import api from '../api/api.js';
 import Skeleton from '../components/Skeleton.jsx';
-import smartTvHero from '../assets/smart_tv_hero.jpg';
+import bondingService from '../assets/bonding_service.jpg';
 
 export const Home = () => {
   const { settings } = useSettings();
@@ -126,23 +126,11 @@ export const Home = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="flex-1 w-full max-w-lg lg:max-w-none relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800"
         >
-          {/* Custom smart TV background image */}
           <img 
-            src={smartTvHero} 
-            alt="Smart LED TV" 
+            src={bondingService} 
+            alt="Siva Electronics LED TV Bonding and Service" 
             className="absolute inset-0 w-full h-full object-cover" 
           />
-          {/* Dark Overlay Vignette for readability */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/80 via-slate-950/20 to-transparent flex flex-col items-center justify-center p-6 text-center">
-            <Tv className="w-16 h-16 text-white/90 mb-3 animate-pulse" />
-            <span className="text-2xl font-bold text-white tracking-wide drop-shadow-md">SMART LED TV</span>
-            <span className="text-xs text-slate-200 uppercase tracking-widest mt-1 drop-shadow-sm font-medium">Ultra HD 4K Sales & Assembly</span>
-            
-            {/* Custom Assembly Badge */}
-            <div className="absolute bottom-6 bg-accent text-white text-[10px] font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-              Custom Assembly Available
-            </div>
-          </div>
         </motion.div>
       </section>
 
