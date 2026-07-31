@@ -113,13 +113,14 @@ const PublicLayout = () => {
 
             {/* Quick Contact CTA */}
             {phone && (
-              <a
-                href={`tel:${phone}`}
+              <button
+                type="button"
+                onClick={() => window.location.href = `tel:${phone.replace(/[^0-9+]/g, '')}`}
                 className="flex items-center gap-2 bg-primary hover:bg-primary-hover text-slate-950 px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide shadow-md transition-all hover:shadow-lg active:scale-95"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call Now</span>
-              </a>
+              </button>
             )}
           </div>
 
@@ -205,24 +206,24 @@ const PublicLayout = () => {
               {/* Mobile CTA */}
               <div className="flex flex-col gap-3 mt-auto">
                 {phone && (
-                  <a
-                    href={`tel:${phone}`}
-                    className="flex items-center justify-center gap-2 bg-primary text-slate-950 py-3 rounded-xl text-sm font-semibold shadow-md"
+                  <button
+                    type="button"
+                    onClick={() => window.location.href = `tel:${phone.replace(/[^0-9+]/g, '')}`}
+                    className="flex items-center justify-center gap-2 bg-primary text-slate-950 py-3 rounded-xl text-sm font-semibold shadow-md w-full"
                   >
                     <Phone className="w-4 h-4" />
                     <span>Call Now</span>
-                  </a>
+                  </button>
                 )}
                 {whatsapp && (
-                  <a
-                    href={`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl text-sm font-semibold shadow-md"
+                  <button
+                    type="button"
+                    onClick={() => window.open(`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`, '_blank', 'noopener,noreferrer')}
+                    className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl text-sm font-semibold shadow-md w-full"
                   >
                     <MessageSquare className="w-4 h-4" />
                     <span>WhatsApp</span>
-                  </a>
+                  </button>
                 )}
               </div>
             </motion.div>
@@ -273,21 +274,24 @@ const PublicLayout = () => {
                 Contact & Location
               </span>
               {phone && (
-                <a href={`tel:${phone}`} className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm">
-                  <Phone className="w-4 h-4 text-primary" />
+                <button
+                  type="button"
+                  onClick={() => window.location.href = `tel:${phone.replace(/[^0-9+]/g, '')}`}
+                  className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm text-left w-full"
+                >
+                  <Phone className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>{phone}</span>
-                </a>
+                </button>
               )}
               {whatsapp && (
-                <a
-                  href={`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-green-500 transition-colors text-sm"
+                <button
+                  type="button"
+                  onClick={() => window.open(`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`, '_blank', 'noopener,noreferrer')}
+                  className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-green-500 transition-colors text-sm text-left w-full"
                 >
-                  <MessageSquare className="w-4 h-4 text-green-500" />
+                  <MessageSquare className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>WhatsApp Chat</span>
-                </a>
+                </button>
               )}
               {address && (
                 <div className="flex items-start gap-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed max-w-sm">

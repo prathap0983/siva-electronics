@@ -185,15 +185,18 @@ export const SpareParts = () => {
                         </button>
 
                         {/* Inquiry CTA */}
-                        <a
-                          href={`https://wa.me/${(import.meta.env.VITE_WHATSAPP || '8072300191').replace(/[^0-9]/g, '')}?text=Hi%20Siva%20Electronics%2C%250A%250AI%20am%20inquiring%2520about%2520the%2520spare%2520part%3A%2520*${encodeURIComponent(part.name)}*%20priced%2520at%2520%E2%82%B9${part.price}.%2520Is%2520it%2520compatible%252520with%252520my%252520TV%252520model%252520details%25253F`}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const whatsappNum = (import.meta.env.VITE_WHATSAPP || '8072300191').replace(/[^0-9]/g, '');
+                            const message = `Hi Siva Electronics,\n\nI am inquiring about the spare part: *${part.name}* priced at ₹${part.price}. Is it compatible with my TV model details?`;
+                            window.open(`https://wa.me/${whatsappNum}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+                          }}
                           className="p-2.5 bg-green-600 hover:bg-green-700 text-white rounded-xl shadow-sm transition-colors flex items-center justify-center flex-shrink-0"
                           title="Inquire WhatsApp"
                         >
                           <MessageSquare className="w-3.5 h-3.5" />
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>

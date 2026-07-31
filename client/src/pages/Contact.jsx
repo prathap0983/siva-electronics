@@ -45,9 +45,13 @@ export const Contact = () => {
               </div>
               <div className="space-y-1">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block">Call Shop</span>
-                <a href={`tel:${phone}`} className="text-lg font-bold text-slate-900 dark:text-white hover:text-primary transition-colors hover:underline">
+                <button
+                  type="button"
+                  onClick={() => window.location.href = `tel:${phone.replace(/[^0-9+]/g, '')}`}
+                  className="text-lg font-bold text-slate-900 dark:text-white hover:text-primary transition-colors hover:underline text-left"
+                >
                   {phone}
-                </a>
+                </button>
                 <p className="text-xs text-slate-450">Tap to call our service representative</p>
               </div>
             </div>
@@ -59,14 +63,13 @@ export const Contact = () => {
               </div>
               <div className="space-y-1">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block">WhatsApp Chat</span>
-                <a 
-                  href={`https://wa.me/${cleanWhatsapp}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-lg font-bold text-slate-900 dark:text-white hover:text-green-500 transition-colors hover:underline"
+                <button
+                  type="button"
+                  onClick={() => window.open(`https://wa.me/${cleanWhatsapp}`, '_blank', 'noopener,noreferrer')}
+                  className="text-lg font-bold text-slate-900 dark:text-white hover:text-green-500 transition-colors hover:underline text-left"
                 >
                   Send a Message
-                </a>
+                </button>
                 <p className="text-xs text-slate-450">Instant quotes, compatibility questions, screen images</p>
               </div>
             </div>

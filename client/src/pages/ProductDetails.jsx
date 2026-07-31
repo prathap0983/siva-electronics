@@ -106,22 +106,20 @@ function ProductDetails() {
               <ShoppingCart className="w-4 h-4" />
               <span>Add to Cart</span>
             </button>
-            <a
-              href="https://wa.me/918072300191"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => window.open("https://wa.me/918072300191", "_blank", "noopener,noreferrer")}
               className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold shadow-md active:scale-95 transition-all"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Contact Seller (WhatsApp)</span>
-            </a>
-            <a
-              href="tel:+918072300191"
+            </button>
+            <button
+              onClick={() => window.location.href = "tel:+918072300191"}
               className="flex items-center gap-2 bg-slate-950 hover:bg-slate-850 text-white px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold shadow-md active:scale-95 transition-all"
             >
               <PhoneCall className="w-4 h-4" />
               <span>Call Shop</span>
-            </a>
+            </button>
           </div>
 
         </div>
