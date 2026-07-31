@@ -9,6 +9,7 @@ import { useSettings } from '../context/SettingsContext.jsx';
 import api from '../api/api.js';
 import Skeleton from '../components/Skeleton.jsx';
 import bondingService from '../assets/bonding_service.jpg';
+import circuitBg from '../assets/circuit_bg.png';
 
 export const Home = () => {
   const { settings } = useSettings();
@@ -61,7 +62,35 @@ export const Home = () => {
   ];
 
   return (
-    <div className="space-y-24 pb-16">
+    <div className="space-y-24 pb-16 relative overflow-hidden">
+      
+      {/* Background Circuit Decals */}
+      <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
+        {/* Top Left Decal */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute -top-12 -left-20 w-80 md:w-96 opacity-[0.04] dark:opacity-[0.08] rotate-12 filter dark:invert" 
+        />
+        {/* Top Right Decal */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute top-[20%] -right-16 w-72 md:w-80 opacity-[0.03] dark:opacity-[0.06] -rotate-45 filter dark:invert" 
+        />
+        {/* Middle Left Decal */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute top-[45%] -left-24 w-80 md:w-96 opacity-[0.04] dark:opacity-[0.08] rotate-[80deg] filter dark:invert" 
+        />
+        {/* Bottom Right Decal */}
+        <img 
+          src={circuitBg} 
+          alt="" 
+          className="absolute bottom-20 -right-20 w-96 opacity-[0.04] dark:opacity-[0.08] rotate-[15deg] filter dark:invert" 
+        />
+      </div>
       
       {/* 1. Large Hero Section */}
       <section className="relative overflow-hidden py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-12">
