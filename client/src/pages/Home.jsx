@@ -70,25 +70,25 @@ export const Home = () => {
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute -top-12 -left-20 w-80 md:w-96 opacity-[0.04] dark:opacity-[0.08] rotate-12 filter dark:invert" 
+          className="absolute -top-12 -left-20 w-80 md:w-96 opacity-[0.18] dark:opacity-[0.22] rotate-12 filter dark:invert" 
         />
         {/* Top Right Decal */}
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute top-[20%] -right-16 w-72 md:w-80 opacity-[0.03] dark:opacity-[0.06] -rotate-45 filter dark:invert" 
+          className="absolute top-[20%] -right-16 w-72 md:w-80 opacity-[0.15] dark:opacity-[0.20] -rotate-45 filter dark:invert" 
         />
         {/* Middle Left Decal */}
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute top-[45%] -left-24 w-80 md:w-96 opacity-[0.04] dark:opacity-[0.08] rotate-[80deg] filter dark:invert" 
+          className="absolute top-[45%] -left-24 w-80 md:w-96 opacity-[0.18] dark:opacity-[0.22] rotate-[80deg] filter dark:invert" 
         />
         {/* Bottom Right Decal */}
         <img 
           src={circuitBg} 
           alt="" 
-          className="absolute bottom-20 -right-20 w-96 opacity-[0.04] dark:opacity-[0.08] rotate-[15deg] filter dark:invert" 
+          className="absolute bottom-20 -right-20 w-96 opacity-[0.18] dark:opacity-[0.22] rotate-[15deg] filter dark:invert" 
         />
       </div>
       
