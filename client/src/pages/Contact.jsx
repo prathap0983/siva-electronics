@@ -8,7 +8,7 @@ export const Contact = () => {
   const businessName = settings?.business_name || 'Siva Electronics';
   const phone = settings?.phone || '+91 8072300191';
   const whatsapp = settings?.whatsapp || '+918072300191';
-  const address = settings?.address || 'Siva electronics,north car street,vava complex,tiruchendur 628205';
+  const address = settings?.address || 'Siva electronics, north car street, Wava complex, tiruchendur 628215';
   const hours = settings?.business_hours || {};
 
   const formatWhatsAppNumber = (phone) => {
@@ -104,11 +104,11 @@ export const Contact = () => {
                 <div className="text-sm font-semibold text-slate-750 dark:text-slate-350 space-y-1">
                   <div className="flex justify-between gap-6">
                     <span className="text-slate-500">Mon - Sat:</span>
-                    <span>{hours.weekdays || '9:00 AM - 8:30 PM'}</span>
+                    <span>{hours.weekdays || '9:30 AM - 9:30 PM'}</span>
                   </div>
                   <div className="flex justify-between gap-6">
                     <span className="text-slate-500">Sunday:</span>
-                    <span>{hours.sunday || '10:00 AM - 5:00 PM'}</span>
+                    <span>{hours.sunday || 'Holiday'}</span>
                   </div>
                 </div>
               </div>

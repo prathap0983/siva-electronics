@@ -42,14 +42,21 @@ export const Home = () => {
   }, []);
 
   const phone = settings?.phone || '+91 8072300191';
-  const whatsapp = settings?.whatsapp || '8072300191';
-  const address = settings?.address || 'Siva electronics,north car street,vava complex,tiruchendur 628205';
+  const whatsapp = settings?.whatsapp || '+918072300191';
+  const address = settings?.address || 'Siva electronics, north car street, Wava complex, tiruchendur 628215';
 
   // Curated Review listings
   const reviews = [
-    { name: 'Rajesh Kumar', role: 'Smart TV Customer', rating: 5, comment: 'Purchased a custom assembled 55" 4K Smart TV from Siva Electronics. The display clarity is outstanding, and it cost me almost half the price of branded TVs. Exceptional value!' },
-    { name: 'Meera Krishnan', role: 'TV Repair Service', rating: 5, comment: 'My Sony Bravia TV motherboard was declared dead by authorized service and quoted a huge sum. Siva Electronics repaired the board in just one day for a fraction of the cost. Highly recommended!' },
-    { name: 'Anwar Raja', role: 'Home Installation Service', rating: 5, comment: 'Prompt and professional. They completed wall mounting and cabling for my new TV within 2 hours of my call. Clean work and very polite technicians.' }
+    { name: 'Prathap', role: 'Google Review', rating: 5, comment: 'Best service center in Tiruchendur.' },
+    { name: 'Vetrivel D', role: 'Google Review', rating: 5, comment: 'Good service 👍 value for money.' },
+    { name: 'Alaguselvi Alagu', role: 'Google Review', rating: 5, comment: 'Low price and best service.' },
+    { name: 'rama lakshmi', role: 'Google Review', rating: 5, comment: 'Best service.' },
+    { name: 'Thangam Thangam', role: 'Google Review', rating: 5, comment: 'Quick service and low price charges.' },
+    { name: 'Suresh Reporter', role: 'Google Review', rating: 5, comment: 'Best service.' },
+    { name: 'PRATHAP FF', role: 'Google Review', rating: 5, comment: 'Value for money 👍🏻' },
+    { name: 'Manoj', role: 'Google Review', rating: 5, comment: 'Best quality ❤️' },
+    { name: 'Chinnaraja Pandian', role: 'Google Review', rating: 5, comment: 'Best service and low price.' },
+    { name: 'Revathi S X- B', role: 'Google Review', rating: 5, comment: 'Quick service.' }
   ];
 
   return (
@@ -148,7 +155,7 @@ export const Home = () => {
           <div className="h-12 w-12 bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light flex items-center justify-center rounded-2xl">
             <Clock className="w-6 h-6" />
           </div>
-          <h3 className="font-bold text-lg text-slate-900 dark:text-white">Same-Day Home Service</h3>
+          <h3 className="font-bold text-lg text-slate-900 dark:text-white">LED TV Home Installation</h3>
           <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
             Our expert technicians carry out home diagnosis, wall-mounting setups, and repairs right in front of your eyes for maximum transparency.
           </p>
@@ -158,7 +165,7 @@ export const Home = () => {
           <div className="h-12 w-12 bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light flex items-center justify-center rounded-2xl">
             <Cpu className="w-6 h-6" />
           </div>
-          <h3 className="font-bold text-lg text-slate-900 dark:text-white">Custom Screen Assemblies</h3>
+          <h3 className="font-bold text-lg text-slate-900 dark:text-white">Custom Assembly TV</h3>
           <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
             Order smart LED TVs custom-assembled with high-grade IPS display panels and Android motherboards to fit custom requirements and budgets.
           </p>
@@ -172,8 +179,8 @@ export const Home = () => {
             <div className="flex justify-center text-primary dark:text-primary-light">
               <Award className="w-8 h-8" />
             </div>
-            <p className="text-3xl font-extrabold text-slate-950 dark:text-white">15+</p>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Years Experience</p>
+            <p className="text-3xl font-extrabold text-slate-950 dark:text-white">25+</p>
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Experience</p>
           </div>
           
           <div className="space-y-2">

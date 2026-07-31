@@ -323,8 +323,8 @@ const PublicLayout = () => {
               <div className="flex items-start gap-3 text-slate-600 dark:text-slate-300 text-sm">
                 <Clock className="w-4 h-4 text-amber-500 mt-0.5" />
                 <div className="flex flex-col gap-1">
-                  <span>Mon - Sat: {hours.weekdays || '9:00 AM - 8:30 PM'}</span>
-                  <span>Sunday: {hours.sunday || '10:00 AM - 5:00 PM'}</span>
+                  <span>Mon - Sat: {hours.weekdays || '9:30 AM - 9:30 PM'}</span>
+                  <span>Sunday: {hours.sunday || 'Holiday'}</span>
                 </div>
               </div>
             </div>

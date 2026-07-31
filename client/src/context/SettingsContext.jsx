@@ -18,8 +18,8 @@ export const SettingsProvider = ({ children }) => {
         business_name: 'Siva Electronics',
         phone: '+91 8072300191',
         whatsapp: '+918072300191',
-        address: 'Siva electronics,north car street,vava complex,tiruchendur 628205',
-        business_hours: { weekdays: '9:00 AM - 8:30 PM', sunday: '10:00 AM - 5:00 PM' },
+        address: 'Siva electronics, north car street, Wava complex, tiruchendur 628215',
+        business_hours: { weekdays: '9:30 AM - 9:30 PM', sunday: 'Holiday' },
         social_links: { facebook: 'https://facebook.com', instagram: 'https://instagram.com', youtube: 'https://youtube.com' }
       });
     } finally {

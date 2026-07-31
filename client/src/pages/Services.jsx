@@ -42,7 +42,7 @@ export const Services = () => {
       desc: 'Micro-soldering, firmware flashing, and BGA repairs on logic boards to recover dead TVs.'
     },
     {
-      title: 'Home Service',
+      title: 'LED TV Home Installation',
       icon: HomeIcon,
       desc: 'Technicians deploy straight to your home for diagnostic checkups, saving you the hassle of carrying heavy TVs.'
     },
@@ -52,7 +52,7 @@ export const Services = () => {
       desc: 'Professional installation using heavy-duty steel mounts (fixed, tilting, or swivel options) for maximum safety.'
     },
     {
-      title: 'Custom TV Assembly',
+      title: 'Custom Assembly TV',
       icon: LayoutGrid,
       desc: 'Custom-assembled LED TVs constructed using high-quality IPS panels and custom motherboards matching specific budgets.'
     }

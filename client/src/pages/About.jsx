@@ -28,7 +28,7 @@ export const About = () => {
         <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-slate-900 shadow-xl flex items-center justify-center border border-slate-200 dark:border-slate-800">
           <div className="text-center p-6 text-white space-y-2">
             <Wrench className="w-16 h-16 text-primary-light mx-auto animate-pulse" />
-            <span className="block font-bold text-lg">15+ Years Technical Experience</span>
+            <span className="block font-bold text-lg">25+ Years Technical Experience</span>
             <span className="block text-xs text-slate-400">Micro-soldering, backlight arrays, and panel replacements</span>
           </div>
         </div>
