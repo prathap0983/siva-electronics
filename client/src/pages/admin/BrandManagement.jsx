@@ -280,11 +280,11 @@ export const BrandManagement = () => {
 
       </div>
 
-      {/* Brand Dialog Form drawer */}
+      {/* Brand Dialog Form Modal (Centered) */}
       {isBrandFormOpen && (
-        <div className="fixed inset-0 z-40 flex justify-end">
-          <div className="fixed inset-0 bg-black/50" onClick={() => setIsBrandFormOpen(false)} />
-          <div className="relative w-full max-w-sm bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 h-full overflow-y-auto p-8 shadow-2xl z-10 text-left flex flex-col justify-between">
+        <div className="fixed inset-0 z-40 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsBrandFormOpen(false)} />
+          <div className="relative w-full max-w-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl z-10 text-left flex flex-col justify-between">
             <div className="space-y-6">
               <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">
@@ -342,11 +342,11 @@ export const BrandManagement = () => {
         </div>
       )}
 
-      {/* Category Dialog Form drawer */}
+      {/* Category Dialog Form Modal (Centered) */}
       {isCatFormOpen && (
-        <div className="fixed inset-0 z-40 flex justify-end">
-          <div className="fixed inset-0 bg-black/50" onClick={() => setIsCatFormOpen(false)} />
-          <div className="relative w-full max-w-sm bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 h-full overflow-y-auto p-8 shadow-2xl z-10 text-left flex flex-col justify-between">
+        <div className="fixed inset-0 z-40 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsCatFormOpen(false)} />
+          <div className="relative w-full max-w-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl z-10 text-left flex flex-col justify-between">
             <div className="space-y-6">
               <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">
