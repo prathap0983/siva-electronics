@@ -8,6 +8,7 @@ import {
   Menu, X, Sun, Moon, ArrowLeft, Store
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import projectLogo from '../assets/logo.jpg';
 
 const AdminLayout = () => {
   const { user, logout, isAuthenticated, loading } = useAuth();
@@ -68,9 +69,11 @@ const AdminLayout = () => {
       <aside className="hidden lg:flex flex-col w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-850 h-screen sticky top-0">
         {/* Sidebar Header */}
         <div className="h-20 px-6 border-b border-slate-100 dark:border-slate-800/60 flex items-center gap-3">
-          <div className="h-9 w-9 bg-primary text-white flex items-center justify-center font-bold text-lg rounded-lg shadow-sm">
-            S
-          </div>
+          <img 
+            src={settings?.logo_url || projectLogo} 
+            alt="Logo" 
+            className="h-9 w-9 object-cover rounded-full border border-slate-200 dark:border-slate-800 shadow-sm" 
+          />
           <div className="flex flex-col">
             <span className="font-bold text-sm tracking-tight text-slate-950 dark:text-white">
               {settings?.business_name || 'Siva Electronics'}
@@ -144,7 +147,11 @@ const AdminLayout = () => {
               <div>
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 bg-primary text-white flex items-center justify-center font-bold text-base rounded-lg">S</div>
+                    <img 
+                      src={settings?.logo_url || projectLogo} 
+                      alt="Logo" 
+                      className="h-8 w-8 object-cover rounded-full border border-slate-200 dark:border-slate-800" 
+                    />
                     <span className="font-bold text-sm text-slate-950 dark:text-white">Admin Menu</span>
                   </div>
                   <button onClick={() => setSidebarOpen(false)} className="p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">

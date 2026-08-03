@@ -5,6 +5,7 @@ import { useToast } from '../../context/ToastContext.jsx';
 import { useSettings } from '../../context/SettingsContext.jsx';
 import { ShieldCheck, Mail, Lock, Loader2, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
+import projectLogo from '../../assets/logo.jpg';
 
 export const Login = () => {
   const { login, isAuthenticated, loading } = useAuth();
@@ -66,9 +67,11 @@ export const Login = () => {
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent" />
 
         <div className="flex flex-col items-center text-center space-y-3 mb-8">
-          <div className="h-12 w-12 bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light flex items-center justify-center rounded-2xl">
-            <ShieldCheck className="w-6 h-6" />
-          </div>
+          <img 
+            src={settings?.logo_url || projectLogo} 
+            alt="Logo" 
+            className="h-14 w-14 object-cover rounded-full border border-slate-200 dark:border-slate-800 shadow-md" 
+          />
           <div className="space-y-1">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
               Admin Login

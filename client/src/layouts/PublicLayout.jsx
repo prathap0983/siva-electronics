@@ -5,6 +5,7 @@ import { useSettings } from '../context/SettingsContext.jsx';
 import { useCart } from '../context/CartContext.jsx';
 import { Menu, X, Sun, Moon, Phone, MessageSquare, Clock, MapPin, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import projectLogo from '../assets/logo.jpg';
 
 const PublicLayout = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -49,13 +50,11 @@ const PublicLayout = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo / Brand Name */}
           <Link to="/" className="flex items-center gap-3 group">
-            {settings?.logo_url ? (
-              <img src={settings.logo_url} alt="Logo" className="h-10 w-auto rounded-lg" />
-            ) : (
-              <div className="h-10 w-10 bg-primary text-white flex items-center justify-center font-bold text-xl rounded-xl shadow-md group-hover:scale-105 transition-transform">
-                S
-              </div>
-            )}
+            <img 
+              src={settings?.logo_url || projectLogo} 
+              alt="Logo" 
+              className="h-11 w-11 object-cover rounded-full border border-slate-200 dark:border-slate-800 shadow" 
+            />
             <div className="flex flex-col">
               <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-light transition-colors">
                 {businessName}
